@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My portfolio</title>
+        <meta name="viewport" 
+        content="width=width-device, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+             :root {
+  --bg-color: rgb(83, 69, 96);
+  --text-color:  rgb(83, 69, 96);
+  --btn-bg: black;
+  --btn-text: rgb(83, 69, 96);
+   --display-bg: white;
+   --brg-color:black;
+}
+
+.logo{
+    position:relative;
+    font-size:25px;
+    color:var(--display-bg);
+    text-decoration: none;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 2s ease forwards;
+
+}
+
+@keyframes slideRight{
+    0%{
+        transform:translateX(-100px);
+        opacity:0;
+    }
+ 100%{
+        transform:translateX(0px);
+        opacity:1;
+    }
+
+}
+.header{
+margin:3;
+padding:0;
+overflow:hidden;
+width:100%;
+position:fixed;
+top:0;
+left:0;
+z-index:100;
+display:flex;
+justify-content:space-around;
+}
+.navbar a{
+display:inline-block;
+color:var(--display-bg);
+padding:17px;
+font-size:13px;
+line-height:5px;
+text-decoration:none;
+cursor: default;
+opacity: 0;
+animation: slideTop 2s ease forwards;
+
+}
+.navbar a:hover{
+
+color:var(--bg-color);
+}
+
+@keyframes slideTop{
+    0%{
+        transform:translateY(100px);
+        opacity:0;
+    }
+ 100%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+
+}
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    gap:20vw;
+
+}
+body{background-color:black;
+}
+
+.home{
+    position:relative;
+    width:80%;
+    justify-content: space-between;
+    height: 100vh;
+    background:url(Purple\ Illustrated\ Mountain\ Desktop\ Wallpaper.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    align-items: center;
+    padding:70px 10% 0;
+}
+.container{
+    display:flex;
+    color:white;
+    width:80%;
+      gap: 15vw;
+    justify-content: space-between;
+}
+.home-content{
+    opacity: 0;
+animation: slideTop 4s ease forwards;
+    color:white;
+   
+}
+
+@keyframes slideBottom{
+    0%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+ 100%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+
+}
+
+
+.profile{width:30%;
+height:45%;
+object-fit:fill;
+align-items:center;
+margin-left:5px;
+border-radius: 5px 5px 5px 5px;
+padding:4px;
+box-shadow:3px 4px 10px  rgb(83, 69, 96);
+border:5px solid linear-gradient( black 13%,rgb(83, 69, 96) 70%, purple 15%);
+border-radius:50%;}
+
+.prof{background-color:black;
+border-radius: 5px 5px 5px 5px;
+padding:4px;
+box-shadow:2px 2px 10px rgba(83, 69, 96);}
+
+
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+  <div class="navbar">
+    <a href="#HomE">Home</a>
+    <a href="#AbouT">About</a>
+    <a href="#SkillS">Skill</a>
+    <a href="#ProjecT">Project</a>
+ <a href="#contacT">Contact</a>
+</div>
+</header>
+<section class="home" id="HomE">
+    <div class="container">
+    <div class="home-content">
+        <h2> Hi, i'm Ewaoluwa- </h2>
+        <p style ="font-size:20px;"> a Computer & Electronics Engineering student and <br> Creative Tech Enthusiast.</p>
+
+            <p style="font-size:14px;">I build innovative tech projects, create digital designs,and run
+            <br> a thriving accessories brand.</p>
+    
+        <br> <a href="https://www.linkedin.com/in/ewaoluwa-adigun-9149b21b4" style="color:rgb(83, 69, 96);"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/yourusername" style="color:rgb(83, 69, 96); margin-left:10px;"><i class="fab fa-github"></i></a> &nbsp;&nbsp;
+<a href="mailto:ewaoluwadigun@gmail.com" style="color:rgb(83, 69, 96);"><i class="fa-solid fa-envelope"></i></a>
+</div>
+
+    <img class="profile"  src="https://www.dropbox.com/scl/fi/a88jfaqhnuanm7rwe43rs/Photo-01-05-2025-12-19-53.jpg?rlkey=6ng42fz00tl850sx079baip9p&st=fr1ri21w&dl=1" style="height:200px; max-width: 600px; margin-right:21px;"> 
+</div>
+</section>
+
+<section class="about" id="AbouT">
+    <div class="container">
+    <img class="profile" style="width:25%; height: 20vw;" src="https://www.dropbox.com/scl/fi/a88jfaqhnuanm7rwe43rs/Photo-01-05-2025-12-19-53.jpg?rlkey=6ng42fz00tl850sx079baip9p&st=fr1ri21w&dl=1" style="height:200px; max-width: 600px; margin-right:21px;"> 
+    <p style="font-size: 25px; font:bold; color:rgb(83, 69, 96)">About Me <br> 
+           <span style="font-size: 17px; color:white;"> I'm currently pursuing a Bachelor's degree in Computer & Electronics Engineering at Lagos State University.<br> 
+            Beyond academics, I enjoy building creative tech projects, learning full-stack web development,<br> 
+            and running my accessories brand. I'm passionate about turning ideas into real digital experiences <br>
+            and exploring how technology can solve everyday problems.<br> 
+            I've worked on several exciting projects including an IoT-embedded robotic car built during my SWEP program using Arduino and C++,<br> 
+            and a functional hotel booking website using HTML and CSS.<br> 
+            I also created a UI/UX concept for my business platform, GlamMe, where customers can browse and shop online <br> 
+            currently in development as one of my major student projects. <br> 
+            Right now, I'm advancing my skills in HTML, CSS, JavaScript, and learning Python and C++.<br> 
+            My current focus is on improving my web development abilities and building user-friendly interfaces. <br> 
+             What sets me apart is my ability to blend technology with creativity.<br> 
+            As the founder of Glam Me Accessories, I design and sell curated and handmade fashion pieces.<br> 
+            This mix of tech, business, and design keeps me constantly learning, problem-solving, and innovating.<br> 
+            I'm always open to collaborations, internships, and new learning opportunities.<br> 
+            Let's build something amazing together!<br> 
+            🔗 LinkedIn  </span>   
+         </div>  
+    </div>
+</section>
+<section class="skills" id="SkillS">
+     <div class="container">
+        <div class="prof"> <h2>Web Development</h2>
+            <br>
+            <p>exploring how technology can solve everyday problems.<br> 
+            I've worked on several exciting projects including an IoT-embedded robotic car built during my SWEP program using Arduino and C++,<br> 
+            and a functional hotel booking website using HTML and CSS.<br> 
+            I also created a UI/UX concept for my business platform, GlamMe, where customers can browse and shop online <br> 
+            currently in development as one of my major student projects. <br> 
+            Right now</p>
+        </div>
+
+         <div class="prof"> <h2>UI/UX</h2>
+            <br>
+            <p>exploring how technology can solve everyday problems.<br> 
+            I've worked on several exciting projects including an IoT-embedded robotic car built during my SWEP program using Arduino and C++,<br> 
+            and a functional hotel booking website using HTML and CSS.<br> 
+            I also created a UI/UX concept for my business platform, GlamMe, where customers can browse and shop online <br> 
+            currently in development as one of my major student projects. <br> 
+            Right now</p>
+        </div>
+
+
+         
+        
+     </div>
+
+</section>
+</html>

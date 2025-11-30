@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My portfolio</title>
+        <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+             :root {
+  --bg-color: rgb(83, 69, 96);
+  --text-color:  rgb(83, 69, 96);
+  --btn-bg: black;
+  --btn-text: rgb(83, 69, 96);
+   --display-bg: white;
+   --brg-color:black;
+}
+
+.logo{
+    position:relative;
+    font-size:25px;
+    color:var(--display-bg);
+    text-decoration: none;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 2s ease forwards;
+
+}
+
+@keyframes slideRight{
+    0%{
+        transform:translateX(-100px);
+        opacity:0;
+    }
+ 100%{
+        transform:translateX(0px);
+        opacity:1;
+    }
+
+}
+.header{
+margin:3;
+padding:0;
+overflow:hidden;
+width:100%;
+position:fixed;
+top:0;
+left:0;
+z-index:100;
+display:flex;
+justify-content:space-around;
+}
+.navbar a{
+display:inline-block;
+color:var(--display-bg);
+padding:17px;
+font-size:13px;
+line-height:5px;
+text-decoration:none;
+cursor: default;
+opacity: 0;
+animation: slideTop 2s ease forwards;
+
+}
+.navbar a:hover{
+
+color:var(--bg-color);
+}
+
+@keyframes slideTop{
+    0%{
+        transform:translateY(100px);
+        opacity:0;
+    }
+ 100%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+
+}
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    gap:20vw;
+
+}
+body{background-color:black;
+}
+
+.home{
+    position:relative;
+    width:80%;
+    justify-content: space-between;
+    height: 100vh;
+    background:url(Purple\ Illustrated\ Mountain\ Desktop\ Wallpaper.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    align-items: center;
+    padding:70px 10% 0;
+}
+.container{
+    display:flex;
+    color:white;
+    max-width:100%;
+      gap: 15vw;
+    justify-content: space-between;
+}
+.home-content{
+    opacity: 0;
+animation: slideTop 4s ease forwards;
+    color:white;
+   
+}
+
+@keyframes slideBottom{
+    0%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+ 100%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+
+}
+
+
+.profile{width:30%;
+height:45%;
+object-fit:fill;
+align-items:center;
+margin-left:5px;
+border-radius: 5px 5px 5px 5px;
+padding:4px;
+box-shadow:3px 4px 10px  rgb(83, 69, 96);
+border:5px solid linear-gradient( black 13%,rgb(83, 69, 96) 70%, purple 15%);
+border-radius:50%;}
+
+.prof{background-color:black;
+border-radius: 5px 5px 5px 5px;
+padding:4px;
+box-shadow:2px 2px 10px rgba(83, 69, 96);}
+
+
+.progress-line {
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-line span {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    background-color: rgb(83, 69, 96);
+    animation: animateLine 2s forwards;
+}
+
+.progress-line.css span {
+    animation: animateLineCSS 2s forwards;
+}
+
+@keyframes animateLineCSS {
+    0% { width: 0; }
+    100% { width: 80%; }
+}
+
+
+.progress-line.HTML span {
+    animation: animateLineHTML 2s forwards;
+}
+@keyframes animateLineHTML {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 90%; 
+    }
+}
+
+.progress-line.javascript span {
+    animation: animateLinejavascript 2s forwards;
+}
+
+@keyframes animateLinejavascript {
+    0% { width: 0; }
+    100% { width: 50%; }
+}
+
+.progress-line.UIUX span {
+    animation: animateLineUIUX 2s forwards;
+}
+
+@keyframes animateLineUIUX {
+    0% { width: 0; }
+    100% { width: 70%; }
+}
+
+.circular-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(rgb(83, 69, 96) 0deg, white 0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background 0.5s ease-in-out;
+}
+
+
+.circular::before {
+  content: "";
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.value {
+  position: relative;
+  color: rgb(83, 69, 96);
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.image{
+  width:30% ;
+  height:10vw;
+  padding:2px;
+}
+
+.image:hover{height:25vw;
+box-shadow: 2px 2px 10px rgba(108, 108, 108, 0.437);}
+
+button{
+
+    background-color:rgb(83, 69, 96);
+    color:black;
+    border:4px solid black;
+    padding:6px;
+    margin-top:50px;
+}
+
+button:hover {
+    background-color: transparent;
+    color:rgb(83, 69, 96);
+    border:4px solid rgb(83, 69, 96);
+}
+
+textarea{
+height:15vw;
+ width:40vw; 
+ padding: 1rem; 
+  resize: vertical;
+   border:1px solid rgb(83, 69, 96);
+   border-radius: 6px 6px 6px 6px; 
+   background-color: black; 
+color:white;}
+
+textarea::placeholder {
+  vertical-align: top;
+}
+
+
+
+
+
+.project-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-details {
+  color: #fff;
+  text-align: center;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card:hover .project-details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+</style>
+
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+  <div class="navbar">
+    <a href="#HomE">Home</a>
+    <a href="#AbouT">About</a>
+        <a href="#Service">Service</a>
+    <a href="#SkillS">Skill</a>
+    <a href="#ProjecT">Project</a>
+ <a href="#contacT">Contact</a>
+</div>
+</header>
+<section class="home" id="HomE">
+    <div class="container">
+    <div class="home-content">
+        <h2> Hi, i'm Ewaoluwa- </h2>
+        <p style ="font-size:20px;"> a Computer & Electronics Engineering student and <br> Creative Tech Enthusiast.</p>
+
+            <p style="font-size:14px;">I build innovative tech projects, create digital designs,and run
+            <br> a thriving accessories brand.</p>
+    
+        <br> <a href="https://www.linkedin.com/in/ewaoluwa-adigun-9149b21b4" style="color:rgb(83, 69, 96);"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/yourusername" style="color:rgb(83, 69, 96); margin-left:10px;"><i class="fab fa-github"></i></a> &nbsp;&nbsp;
+<a href="mailto:ewaoluwadigun@gmail.com" style="color:rgb(83, 69, 96);"><i class="fa-solid fa-envelope"></i></a>
+<br> <br> <br> <br> <br> <br> <a href="https://www.dropbox.com/scl/fi/yvkw1zkk7s296eu2gsnpu/Adigun-ewaoluwa-1.pdf?rlkey=qxi5jq1b3r9ctcs0fzyoyginw&st=bo02mmya&dl=1" download>
+  <button style="justify-content: center; align-items: center;" class="button">Download CV</button>
+</a>
+
+</div>
+
+    <img class="profile"  src="https://www.dropbox.com/scl/fi/a88jfaqhnuanm7rwe43rs/Photo-01-05-2025-12-19-53.jpg?rlkey=6ng42fz00tl850sx079baip9p&st=fr1ri21w&dl=1" style="height:200px; max-width: 600px; margin-right:21px;"> 
+
+  </div>
+</section>
+
+<br> <br>
+
+<hr style="border:1px solid white; width:100%;float:left; "> <br> <br>
+
+<section class="about" id="AbouT">
+    <div class="container">
+    <img class="profile" style="width:25%; height: 20vw;" src="https://www.dropbox.com/scl/fi/a88jfaqhnuanm7rwe43rs/Photo-01-05-2025-12-19-53.jpg?rlkey=6ng42fz00tl850sx079baip9p&st=fr1ri21w&dl=1" style="height:200px; max-width: 600px; margin-right:21px;"> 
+    <p style="font-size: 25px; font:bold; color:rgb(83, 69, 96)">About Me <br> <br>
+           <span style="font-size: 17px; color:white;"> I'm currently pursuing a Bachelor's degree in Computer & Electronics Engineering at Lagos State University.<br> 
+            Beyond academics, I enjoy building creative tech projects, learning full-stack web development,<br> 
+            and running my accessories brand. I'm passionate about turning ideas into real digital experiences <br>
+            and exploring how technology can solve everyday problems.<br> 
+            I've worked on several exciting projects including an IoT-embedded robotic car built during my SWEP program using Arduino and C++,<br> 
+            and a functional hotel booking website using HTML and CSS.<br> 
+            I also created a UI/UX concept for my business platform, GlamMe, where customers can browse and shop online <br> 
+            currently in development as one of my major student projects. <br> 
+            Right now, I'm advancing my skills in HTML, CSS, JavaScript, and learning Python and C++.<br> 
+            My current focus is on improving my web development abilities and building user-friendly interfaces. <br> 
+             What sets me apart is my ability to blend technology with creativity.<br> 
+            As the founder of Glam Me Accessories, I design and sell curated and handmade fashion pieces.<br> 
+            This mix of tech, business, and design keeps me constantly learning, problem-solving, and innovating.<br> 
+            I'm always open to collaborations, internships, and new learning opportunities.<br> 
+            Let's build something amazing together!<br> 
+            🔗 LinkedIn  </span>   
+         </div>  
+    </div>
+</section>
+<br>
+<br>
+<hr style="border:1px solid white; width:100%;float:left; "> <br> <br>
+
+<section class="service" id="Service">
+<p style="font-size: 25px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align:center; color:rgb(83, 69, 96); margin-right:15px; ">My Service<br> </p>
+<div class="container">
+<div class="prof"> <h2>Web Development</h2>
+<br>
+  I build responsive, functional, and aesthetically pleasing websites using HTML, CSS, and JavaScript. As a tech enthusiast and design-driven developer, I approach web design from both the visual and technical perspectives.
+    My projects often begin by translating a visual concept or wireframe into actual code. I focus on layout structure, consistent styling, readable typography, and interactive elements that enhance user engagement. I also integrate visual effects and animations where appropriate, to make the site feel dynamic and alive without compromising performance.
+    <br><br>
+    I’ve developed projects like a hotel booking page and my personal portfolio site, where I practiced applying responsive design principles and modular code structure. I'm also currently working on building a digital storefront for my brand, Glam Me Accessories integrating user-friendly browsing, product display, and a clean, elegant UI.
+    <br><br>
+    Web design allows me to express both creativity and logic, and I enjoy turning ideas into living, functional web pages that serve real users. I continuously expand my skills to eventually integrate backend functionality, making my websites not just beautiful, but smart and efficient.
+  </p>
+</div>
+
+<div class="prof" style:50%;> <h2>UI/UX</h2>
+<br>
+<p>
+    I specialize in designing user-friendly digital experiences that balance aesthetics with functionality. My UI/UX design journey starts with understanding the problem, researching the target audience, and defining user goals. I then translate these insights into low-fidelity wireframes, detailed mockups, and interactive prototypes using tools like Figma. I focus on hierarchy, consistency, readability, and accessibility to ensure every interface feels intuitive and easy to navigate.
+    <br><br>
+    I design with empathy prioritizing real users' needs while maintaining the brand’s visual identity. Whether it’s a mobile app, website, or platform dashboard, I craft clean, modern, and engaging layouts that improve user satisfaction. One of my recent projects involved designing a digital shopping experience for my accessories brand, where I mapped out user journeys, designed product pages, and integrated a seamless browsing experience.
+    <br><br>
+    I’m constantly learning and iterating based on feedback. UI/UX to me is more than making things look good it’s about making digital spaces feel natural and purposeful.
+  </p>
+</div>
+</div>
+</section>
+<br>
+<br>
+<hr style="border:1px solid white; width:100%;float:left; "> <br> <br>
+
+<section class="skills" id="SkillS">
+     <p style="font-size: 25px; font:bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align:center; color:rgb(83, 69, 96)">My Skills<br> 
+     <div class="container">
+     <div class="prof"  style="width:50%"> <h2 style="text-decoration: underline;">Technical skills</h2>
+            <br> <br>
+            <i class="fa-brands fa-html5"></i> 
+            <br> <div class="container"> <p>HTML</p>
+            <p>90%</p> </div> <br>
+            <div class="progress-line HTML">
+                 <span></span>
+            </div>
+
+            
+
+            <br> <br> <br>
+            <i class="fa-brands fa-css3-alt"></i>
+             <br> <div class="container"> <p>CSS</p>
+            <p>80%</p> </div> <br>
+            <div class="progress-line css">
+                <span></span>
+            </div>
+
+
+            <br> <br> <br>
+            <i class="fa-brands fa-js"></i>
+             <br> <div class="container"> <p>JavaScript</p>
+            <p>50%</p> </div> <br>
+              <div class="progress-line javascript">
+                <span></span>
+            </div>
+
+
+            <br> <br> <br>
+            <i class="fa-brands fa-figma"></i>
+            <br> <div class="container"> <p>UI/UX</p>
+            <p>70%</p> </div> <br>
+             <div class="progress-line UIUX">
+                <span></span> </div>
+                </div>
+        
+                
+
+
+ <div class="prof" style="width:50%"> <h2 style="text-decoration: underline;">Professional skills</h2>
+   <br>
+     <p>problem-solving</p> <br>
+<div class="circular-wrapper">
+  <div class="circular" data-percentage="70">
+    <span class="value">70%</span>
+  </div>
+</div>
+<br> <br>
+
+  <p style="margin-left:5px">Creativity</p> <br>
+<div class="circular-wrapper">
+  <div class="circular" data-percentage="80">
+    <span class="value">80%</span>
+  </div>
+</div>
+<br> <br>
+  <p>Team work</p>
+  <br>
+<div class="circular-wrapper">
+  <div class="circular" data-percentage="60">
+    <span class="value">60%</span>
+  </div>
+</div>
+
+
+<br> <br>
+
+ </div>
+     </div>
+    </section>
+<br> <br>
+
+<hr style="border:1px solid white; width:100%;float:left; "> <br> <br>
+
+ <section class="project" id="ProjecT">
+     <p style="font-size: 25px; font:bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align:center; color:rgb(83, 69, 96)">Projects<br> 
+     <div class="container">
+
+      <div class="project-card">
+  <img src="https://www.dropbox.com/scl/fi/4xcbrl137rnvk134683au/WhatsApp-Image-2025-05-31-at-01.56.43_10a2d06a.jpg?rlkey=6bs1fhkl1i7unwuwrluum8ai1&st=joadl7nh&dl=1"  alt="Project 1">
+  <div class="overlay">
+    <div class="project-details">
+      <h3>Hotel booking website</h3>
+      <p>A static hotel booking site showcasing clean UI design and mobile responsiveness.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="project-card">
+  <img src="https://www.dropbox.com/scl/fi/9r5rap3cp7clvr733qvh7/Screenshot-2025-07-17-073533.png?rlkey=qfc6myy8o86qyw4jhyu1b52lp&st=clpcu8s6&dl=1"  alt="Project 2">
+  <div class="overlay">
+    <div class="project-details">
+      <h3>Bigi prototype design</h3>
+      <p>    A high-fidelity prototype design for the Bigi beverage brand, crafted to enhance user interaction and visual appeal. This prototype focuses on vibrant branding, product highlights, and engaging user flow for an immersive experience. Designed to simulate a responsive and modern web interface.
+</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="project-card">
+  <img src="https://www.dropbox.com/scl/fi/0fcllvm2jehcs0tgyp928/Screenshot-2025-07-03-152735.png?rlkey=x2inw18laoyfkl7kfzvj8k1m8&st=z520azle&dl=1"  alt="Project 3">
+  <div class="overlay">
+    <div class="project-details">
+      <h3>Stopwatch</h3>
+      <p>  A simple and interactive stopwatch with start, pause, and reset functionalities. Designed with a sleek interface and accurate time tracking.
+</p>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+
+        <div class="container">
+
+<div class="project-card">
+  <img src="https://www.dropbox.com/scl/fi/8m1v3qemqh0qgql36g7ur/Screenshot-2025-07-03-152653.png?rlkey=fcjbmm32vojurnqpgkss86od9&st=8loijs79&dl=1"  alt="Project 4">
+  <div class="overlay">
+    <div class="project-details">
+      <h3>To-Do list</h3>
+      <p>  A user-friendly to-do list app that allows users to add, mark, and delete tasks to stay organized and productive.
+</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="project-card">
+  <img src="https://www.dropbox.com/scl/fi/jmcfkv97oyiqiik4sw4ca/Screenshot-2025-07-17-073132.png?rlkey=fcat6lqh4d45xj7s3gbxjry8j&st=axcitrnn&dl=1"  alt="Project 5">
+  <div class="overlay">
+    <div class="project-details">
+      <h3>Wireframe design</h3>
+      <p>   A quick wireframe design for the Glam Me Accessories shopping page, focusing on clean product layout, intuitive navigation, and an engaging user journey. This low-fidelity wireframe outlines the essential structure for a seamless shopping experience, serving as a foundation for future high-fidelity UI design.
+</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="project-card">
+  <img src="https://www.dropbox.com/scl/fi/7kymddxibivzotz43au1v/Screenshot-2025-07-17-072159.png?rlkey=hh5i3fpxybjrxwsd0q6wj2bf9&st=eaop4vxu&dl=1"  alt="Project 6">
+  <div class="overlay">
+    <div class="project-details">
+      <h3>Instagram clone</h3>
+      <p>    A simple Instagram clone featuring a user-friendly layout, profile pages, image posts, likes, and comments. Designed to replicate the core functionality and feel of Instagram using HTML, CSS, and JavaScript.
+
+      </p>
+    </div>
+  </div>
+</div>
+
+     </div>
+
+
+             <div class="container">
+
+<div class="project-card">
+  <img src="https://www.dropbox.com/scl/fi/my8lrbtjq0kz3t2totf2x/Screenshot-2025-07-17-073007.png?rlkey=91hlow0drcvlbyr49ashcj1hj&st=9s60n67f&dl=1"  alt="Project 7">
+  <div class="overlay">
+    <div class="project-details">
+      <h3>GlamMe UI/UX</h3>
+      <p>    A sleek and feminine UI/UX design for *Glam Me Accessories*, focused on user-friendly navigation and stylish visual appeal. The design highlights product showcases, seamless shopping experience, and a consistent brand identity that reflects elegance and modern fashion.
+</p>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <img src="https://www.dropbox.com/scl/fi/yn3ovi39jo02dcrevv3uq/Screenshot-2025-07-17-072401.png?rlkey=7rue7m0hj248tslc40uegwgx8&st=mjpjmmbf&dl=1"  alt="Project 8">
+  <div class="overlay">
+    <div class="project-details">
+      <h3>Social media page</h3>
+      <p>    A visually appealing static social media page design showcasing user profiles, posts, likes, and comments sections using only HTML and CSS.</p>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <img src="https://www.dropbox.com/scl/fi/e299yuzhkfv1zgv80s7bv/Screenshot-2025-07-03-154054.png?rlkey=i1u85yo1pfhbo46bwmvqerikp&st=47xifh5v&dl=1"  alt="Project 9">
+  <div class="overlay">
+    <div class="project-details">
+      <h3>Scientific calculator</h3>
+      <p>  A fully functional scientific calculator that performs advanced calculations like logarithms, exponents, and trigonometric functions. Also includes a light/dark theme toggle for a customizable user experience.
+</p>
+    </div>
+  </div>
+</div>
+
+             </div>
+
+<br> <br>
+
+<hr style="border:1px solid white; width:100%;float:left; "> <br> <br>
+
+ <section class="class" id="contacT">
+     <p style="font-size: 25px; font:bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:rgb(83, 69, 96)">Contact Me<br> 
+     <div class="container">
+  <p> Let's Work Together <br><br>
+     Have a project in mind or want to collaborate? I’d love to hear from you!<br>
+      Whether it’s UI/UX design, web development, or something creative,<br>
+       let’s bring your ideas to life together. <br> <br>
+
+<br>Lagos, Nigeria<br> <br>
+Phone:<a href="tel:+2348037712413" style="color:rgb(83, 69, 96);">+2348037712413</a>
+<br> <br>
+Email:<a href="mailto:ewaoluwadigun@gmail.com" style="color:rgb(83, 69, 96);">ewaoluwadigun@gmail.com</a> <br> <br><br>
+
+<a href="https://www.linkedin.com/in/ewaoluwa-adigun-9149b21b4" style="color:rgb(83, 69, 96);"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/yourusername" style="color:rgb(83, 69, 96); margin-left:10px;"><i class="fab fa-github"></i></a>
+
+<p style="color:rgb(83, 69, 96);">E-mail <i class="fa-solid fa-envelope"></i><br> 
+<br>
+
+<input style=" height:24px; width: 40vw; border:1px solid rgb(83, 69, 96); border-radius: 6px 6px 6px 6px; background-color: black; color:white" type="text" id="name" name="name" placeholder="name" value=""><br> <br>
+   
+<input style=" height:24px;  width: 40vw; border:1px solid rgb(83, 69, 96); border-radius: 6px 6px 6px 6px; background-color: black; color:white" type="text" id="email" name="email" placeholder="email" value=""><br> <br>
+
+
+<input style=" height:24px; width: 40vw;border:1px solid rgb(83, 69, 96); border-radius: 6px 6px 6px 6px; background-color: black; color:white" type="text" id="name" name="name" placeholder="subject" value=""><br> <br>
+
+<textarea placeholder="Message..."></textarea>
+
+<button style="height:24px; min-height: 35px; width: 40vw; border-radius: 6px 6px 6px 6px; background-color: rgb(83, 69, 96); color:black;"
+  type="button"> send message</button>  
+</div>
+
+<script>
+  document.querySelectorAll('.circular').forEach(circle => {
+    const targetPercent = parseInt(circle.dataset.percentage);
+    let current = 0;
+
+    const interval = setInterval(() => {
+      if (current >= targetPercent) {
+        clearInterval(interval);
+        return;
+      }
+      current += 1;
+      circle.querySelector('.value').textContent = `${current}%`;
+      const degree = current * 3.6;
+      circle.style.background = `conic-gradient(rgb(83, 69, 96) 0deg ${degree}deg, white ${degree}deg 360deg)`;
+    }, 20);
+});
+</script>
+
+
+
+</body>
+</html>
